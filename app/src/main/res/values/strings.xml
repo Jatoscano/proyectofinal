@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
+
+    <!--TextView-->
+    <string name="txt_login">Login</string>
+    <string name="txt_user">User</string>
+    <string name="txt_password">Password</string>
+    <!--Button-->
+    <string name="btn_login_text">Ingresar</string>
+    <string name="btn_exit_text">Salir</string>
+
+    <!--EditText-->
+    <string name="edtxt_user">Ingrese el Usuario</string>
+    <string name="edtxt_password">Ingrese la Clave</string>
+
 </resources>
