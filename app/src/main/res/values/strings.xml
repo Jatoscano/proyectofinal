@@ -3,10 +3,17 @@
 
     <!--TextView-->
     <string name="txt_login">Login</string>
+    <string name="txt_sign_up">Registro de Usuarios</string>
     <string name="txt_user">User</string>
     <string name="txt_password">Password</string>
+    <string name="txt_name">Nombre</string>
+    <string name="txt_last_name">Apellido</string>
+    <string name="txt_email">Correo Electronico</string>
+    <string name="txt_pass">Clave</string>
+
     <!--Button-->
     <string name="btn_login_text">Ingresar</string>
+    <string name="btn_sign_up_text">Registrarse</string>
     <string name="btn_exit_text">Salir</string>
 
     <!--EditText-->
