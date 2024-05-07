@@ -11,6 +11,33 @@
     android:background="@drawable/fondo_1"
     tools:context=".LoginActivity">
 
+    <LinearLayout
+        android:id="@+id/linear_img"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_view_login">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_login"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/logo"
+                app:shapeAppearance="@style/img_shape_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view_login"
         android:layout_width="match_parent"
@@ -51,57 +78,71 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/edtxt_login_user"/>
+                    app:layout_constraintBottom_toTopOf="@id/textField_user"/>
 
-                <EditText
-                    android:id="@+id/edtxt_login_user"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sanchez"
-                    android:text="@string/edtxt_user"
+                    android:hint="@string/edtxt_user"
+                    app:hintTextColor="@color/hunter_green"
+                    app:boxStrokeColor="@color/office_green"
                     app:layout_constraintTop_toBottomOf="@id/txt_login_login"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/edtxt_login_password"/>
+                    app:layout_constraintBottom_toTopOf="@id/textField_password">
 
-                <EditText
-                    android:id="@+id/edtxt_login_password"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtxt_login_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_name_size_title_3"
+                        app:layout_constraintTop_toBottomOf="@id/txt_login_login"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/textField_password"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sanchez"
-                    android:text="@string/edtxt_password"
-                    app:layout_constraintTop_toBottomOf="@id/edtxt_login_user"
+                    android:hint="@string/edtxt_password"
+                    app:hintTextColor="@color/hunter_green"
+                    app:boxStrokeColor="@color/office_green"
+                    app:layout_constraintTop_toBottomOf="@id/textField_user"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/btn_login_sign_in"/>
+                    app:layout_constraintBottom_toTopOf="@id/btn_login_sign_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtxt_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_name_size_title_3"
+                        app:layout_constraintTop_toBottomOf="@id/textField_user"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/btn_login_sign_in"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                    style="@style/btn_login"
                     android:id="@+id/btn_login_sign_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_login_text"
-                    android:fontFamily="@font/allerta"
-                    android:backgroundTint="@color/office_green"
-                    android:drawableLeft="@drawable/login"
-                    android:drawableTint="@color/ivory"
-                    app:layout_constraintTop_toBottomOf="@id/edtxt_login_password"
+                    app:layout_constraintTop_toBottomOf="@id/textField_password"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/btn_login_sign_up"/>
+                    app:layout_constraintEnd_toStartOf="@id/btn_login_sign_up"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <Button
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    style="@style/btn_sign_up"
                     android:id="@+id/btn_login_sign_up"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_sign_up_text"
-                    android:textColor="@color/hunter_green"
-                    android:fontFamily="@font/allerta"
-                    android:drawableLeft="@drawable/app_registration"
-                    android:drawableTint="@color/hunter_green"
-                    app:layout_constraintTop_toBottomOf="@id/btn_login_sign_in"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textField_password"
+                    app:layout_constraintStart_toEndOf="@id/btn_login_sign_in"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
 

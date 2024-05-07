@@ -48,4 +48,5 @@
     <color name="canary">#FFEF00</color>
     <color name="gold">#FFD700</color>
     <color name="ivory">#FFFFF0</color>
+    <color name="transparent">#00000000</color>
 </resources>
