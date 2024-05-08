@@ -49,4 +49,6 @@
     <color name="gold">#FFD700</color>
     <color name="ivory">#FFFFF0</color>
     <color name="transparent">#00000000</color>
+    <color name="celurean_1">#BDE0FE</color>
+    <color name="celurean_2">#E3F2FD</color>
 </resources>
