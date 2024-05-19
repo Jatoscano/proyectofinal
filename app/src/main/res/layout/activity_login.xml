@@ -9,7 +9,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:background="@drawable/fondo_1"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <LinearLayout
         android:id="@+id/linear_img"

@@ -1,5 +1,6 @@
-package com.toscano.proyectofinal
+package com.toscano.proyectofinal.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
