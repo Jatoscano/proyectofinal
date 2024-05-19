@@ -1,16 +1,12 @@
-package com.toscano.proyectofinal
+package com.toscano.proyectofinal.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.snackbar.Snackbar
+import com.toscano.proyectofinal.data.repository.ListUsers
+import com.toscano.proyectofinal.logic.usercases.LoginUserCase
 import com.toscano.proyectofinal.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -29,13 +25,15 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnLoginSignIn.setOnClickListener {
 
-            var loginUserCase = LoginUserCase()
+            var loginUserCase = LoginUserCase(ListUsers())
 
             var result = loginUserCase(binding.edtxtLoginUser.text.toString(), binding.edtxtLoginPassword.text.toString())
 
-            //Manejo de Expersiones Lambda
             result.onSuccess {
+
+                user -> var intentMainActivity = Intent(this, MainActivity::class.java).apply { putExtra("IdUser", user.id) }
                 Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                startActivity(intentMainActivity)
             }
 
             result.onFailure {
