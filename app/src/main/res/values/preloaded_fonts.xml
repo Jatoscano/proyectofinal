@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre_medium</item>
+        <item>@font/allerta</item>
+        <item>@font/bitter_italic</item>
+        <item>@font/kanit_bold</item>
+        <item>@font/libre_baskerville</item>
+        <item>@font/libre_baskerville_bold</item>
+        <item>@font/quicksand_medium</item>
+        <item>@font/roboto</item>
+        <item>@font/sanchez</item>
+    </array>
+</resources>
