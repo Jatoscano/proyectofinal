@@ -1,6 +1,6 @@
-package com.toscano.proyectofinal.data.repository
+package com.toscano.proyectofinal.data.local.repository
 
-import com.toscano.proyectofinal.data.UserClass
+import com.toscano.proyectofinal.data.local.UserClass
 
 class ListUsers {
 
