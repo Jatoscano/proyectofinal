@@ -1,7 +1,7 @@
 package com.toscano.proyectofinal.logic.usercases
 
-import com.toscano.proyectofinal.data.UserClass
-import com.toscano.proyectofinal.data.repository.ListUsers
+import com.toscano.proyectofinal.data.local.UserClass
+import com.toscano.proyectofinal.data.local.repository.ListUsers
 
 class LoginUserCase (var listUsers: ListUsers){
 

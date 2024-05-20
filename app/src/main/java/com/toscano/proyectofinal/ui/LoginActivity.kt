@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.toscano.proyectofinal.data.repository.ListUsers
+import com.toscano.proyectofinal.data.local.repository.ListUsers
 import com.toscano.proyectofinal.logic.usercases.LoginUserCase
 import com.toscano.proyectofinal.databinding.ActivityLoginBinding
 
