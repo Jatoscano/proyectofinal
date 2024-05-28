@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +49,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Retrofit - Converter-Gson
+    implementation(libs.bundles.retrofit)
+    //Corrutinas
+    implementation (libs.kotlinx.coroutines.android)
+    //Coil
+    implementation(libs.coil)
+    //Glide
+    implementation (libs.glide)
 }
