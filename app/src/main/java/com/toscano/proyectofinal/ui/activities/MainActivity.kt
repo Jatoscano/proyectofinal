@@ -1,4 +1,4 @@
-package com.toscano.proyectofinal.ui
+package com.toscano.proyectofinal.ui.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnMain.setOnClickListener {
 
-            lifecycleScope.launch(Dispatchers.IO) { GetAllProductsCase().invoke() }
+            lifecycleScope.launch(Dispatchers.IO) {
+                GetAllProductsCase().invoke() }
         }
     }
 }

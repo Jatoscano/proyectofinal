@@ -1,4 +1,4 @@
-package com.toscano.proyectofinal.ui
+package com.toscano.proyectofinal.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
