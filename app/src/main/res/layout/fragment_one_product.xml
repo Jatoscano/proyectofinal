@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".ui.fragments.products.OneProductFragment">
+
+
+    <ImageView
+        android:id="@+id/img_one"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/celeste"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_3"
+        android:text="Nombre del Producto:"/>
+
+    <TextView
+        android:id="@+id/txt_one_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_4"
+        android:text="nombre"
+        android:paddingBottom="15dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_3"
+        android:text="Descripcion:"/>
+    <TextView
+        android:id="@+id/txt_one_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        android:textSize="@dimen/txt_size_text_4"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_3"
+        android:text="Precio del Producto:"/>
+    <TextView
+        android:id="@+id/txt_one_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textSize="@dimen/txt_size_text_4"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_3"
+        android:text="Catgoria:"/>
+    <TextView
+        android:id="@+id/txt_one_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textSize="@dimen/txt_size_text_4"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_text_3"
+        android:text="Relacionados:"/>
+    <TextView
+        android:id="@+id/txt_slug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Slug"
+        android:textSize="@dimen/txt_size_text_4"
+        android:paddingBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Pagar"
+        android:backgroundTint="@color/cerulean"/>
+
+
+</LinearLayout>

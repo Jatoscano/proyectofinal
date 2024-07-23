@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navig_intro"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.intro.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_introFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.user.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.user.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_confirmSignUpFragment"
+            app:destination="@id/confirmSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmSignUpFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.user.ConfirmSignUpFragment"
+        android:label="fragment_confirm_sign_up"
+        tools:layout="@layout/fragment_confirm_sign_up" >
+        <action
+            android:id="@+id/action_confirmSignUpFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.products.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_oneProductFragment"
+            app:destination="@id/oneProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneProductFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.products.OneProductFragment"
+        android:label="fragment_one_product"
+        tools:layout="@layout/fragment_one_product" >
+        <argument
+            android:name="idProduct"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_oneProductFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.confirm.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_confirmBuyFragment"
+            app:destination="@id/confirmBuyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmBuyFragment"
+        android:name="com.toscano.proyectofinal.ui.fragments.confirm.ConfirmBuyFragment"
+        android:label="fragment_confirm_buy"
+        tools:layout="@layout/fragment_confirm_buy" >
+        <action
+            android:id="@+id/action_confirmBuyFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/modalBottomSheet"
+        android:name="com.toscano.proyectofinal.ui.modals.ModalBottomSheet"
+        android:label="ModalBottomSheet" >
+        <action
+            android:id="@+id/action_modalBottomSheet_to_oneProductFragment"
+            app:destination="@id/oneProductFragment" />
+    </dialog>
+</navigation>
