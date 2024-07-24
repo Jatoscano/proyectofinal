@@ -22,7 +22,7 @@ class GetOneFakeProductUsesCase {
 
         else {
             Log.d("RSP", "La ejecucion fallo")
-            emit(Result.failure(Exception("La ejecucion fallo")))
+            emit(Result.failure(Exception("")))
         }
     }
 }

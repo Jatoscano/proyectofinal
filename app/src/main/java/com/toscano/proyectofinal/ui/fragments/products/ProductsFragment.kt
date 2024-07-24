@@ -36,10 +36,19 @@ class ProductsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initVariables()
-        //initListeners()
+        initListeners()
         initData()
         initObservers()
 
+    }
+
+    private fun initListeners(){
+        binding.rfSwipe.setOnRefreshListener {
+
+            initData()
+            binding.rfSwipe.isRefreshing = false
+
+        }
     }
 
     private fun initVariables(){
